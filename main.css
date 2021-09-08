@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(-45deg, #157da3, #E73C7E);
+    z-index: -1;
+}
+
+
+/*main*/
+
+.main {
+    position: relative;
+    z-index: 1;
+    top: 10%;
+    margin: auto;
+    width: 70%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.822);
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+
+/*nav*/
+
+.navigation {
+    margin: 20px auto 60px;
+    display: flex;
+    position: relative;
+    width: 600px;
+}
+
+.nav-item {
+    min-width: 100px;
+    font-size: 25px;
+    padding: 20px 20px 11px 20px;
+    height: 90px;
+    background: linear-gradient(-45deg, #157da3, #E73C7E);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-bottom: 6px transparent;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.nav-item.active {
+    opacity: 1;
+}
+
+.navigation .line {
+    height: 6px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(-45deg, #157da3, #E73C7E);
+    transition: all 0.5s ease;
+}
+
+
+/*content*/
+
+.content {
+    padding: 28px 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.text h2 {
+    font-size: 30px;
+    background: linear-gradient(-10deg, #157da3, #E73C7E);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.course {
+    display: none;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.course.active {
+    display: block;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 40% 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.img img {
+    width: 100%;
+}
+
+.learn {
+    width: 120px;
+    border: none;
+    margin-top: 40px;
+    font-size: 20px;
+    position: relative;
+    height: 50px;
+    z-index: 0;
+    color: white;
+    background: black;
+    cursor: pointer;
+}
+
+.learn::before {
+    position: absolute;
+    width: 50%;
+    background: linear-gradient(-10deg, #157da3, #E73C7E);
+    height: 50px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    content: '';
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+.learn:hover::before {
+    width: 100%;
+}
+
+
+/*overlay*/
+
+.overlay {
+    position: absolute;
+    background-image: linear-gradient(-45deg, #157da3, #E73C7E);
+    width: 100%;
+    height: 100vh;
+    border-radius: 100%;
+    top: 30%;
+    right: 55%;
+    z-index: -1;
+}
